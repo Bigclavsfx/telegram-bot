@@ -216,7 +216,7 @@ cold-start with the configured `START_LOOKBACK_LEDGERS` after checking the
 retained-history floor. A cold start may produce duplicate notifications, but it
 does not replay all retained history.
 
-Before changing `CURSOR_FILE` or deleting persisted state, preserve the existing file for investigation if possible.
+Before changing `CURSOR_FILE` or deleting persisted state, preserve the existing file for investigation if possible. For an exhaustive reference of all on-disk files, writers, and recovery behaviors, see [On-Disk State Files](state-files.md).
 
 If the stored cursor is confirmed incompatible or permanently outside RPC retention, stop the notifier, preserve the cursor file for investigation, and deliberately perform a cold start with the configured `START_LOOKBACK_LEDGERS` after checking the retained-history floor. This may produce duplicate notifications, but it does not skip or replay all retained history.
 
